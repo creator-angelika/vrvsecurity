@@ -13,7 +13,7 @@ const Dashboard = () => {
           className="wrench-icon"
         />
       </h1>
-      <p>This is your workspace</p>
+      <p>This is your workspace. Drag and Drop the users to their roles.</p>
       
       <div className="main-container">
         <PeopleList />

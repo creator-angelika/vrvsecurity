@@ -1,0 +1,47 @@
+/* PeopleList.css */
+.people-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 14rem;
+    margin-right: 1rem;
+  }
+  
+  .people-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: grab; /* Default cursor: grab */
+    outline: 2px solid rgb(0, 0, 0); /* Added for visibility */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transformation */
+  }
+  
+  /* When dragging, change cursor to 'grabbing' */
+  .people-item:active {
+    cursor: grabbing;
+  }
+  
+  .people-item.dragging {
+    opacity: 0.5; /* Make the item semi-transparent when dragging */
+    transform: scale(1.05); /* Slightly scale up the item */
+  }
+  
+  .people-image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 25%;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+  }
+  
+  .people-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  

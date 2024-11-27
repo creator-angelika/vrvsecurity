@@ -1,0 +1,126 @@
+/* RoleContainer.css */
+.role-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  width: 60rem;
+  position: relative;
+
+}
+
+.pyramid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.role-blocks {
+  display: flex;
+  justify-content: space-around;
+  width: 100%; /* Ensure the blocks fill the available width */
+  gap: 4rem;
+}
+
+.role-block {
+  width: 12rem; /* Set a fixed width */
+  height: 8rem; /* Set a fixed height */
+  background-color: #e0e0e0; /* Background color for role blocks */
+  border: 1px solid #ddd; /* Border for visual separation */
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Ensure the content inside doesn't overflow */
+  overflow: hidden; /* Prevent content from overflowing */
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  box-sizing: border-box; /* Include padding in element's total size */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.role-block.empty {
+  background-color: #f5f5f5; /* Light background for empty blocks */
+  border: 1px dashed #bbb; /* Dashed border for empty blocks */
+}
+
+.leader {
+  width: 12rem; /* Optional, slightly wider leader block */
+  height: 9rem; /* Optional, slightly taller leader block */
+  background-color: #b3e0ff; /* Optional, leader block can have a different color */
+  display: flex;
+  flex-direction: column; /* Ensure content is stacked vertically */
+  justify-content: center;
+  align-items: center; /* Center content horizontally */
+  gap: 0.5rem; /* Space between image and text */
+  padding: 0.5rem; /* Optional, adds some padding inside */
+}
+
+.role-icon {
+  max-width: 70%; /* Limit image width */
+  max-height: 80%; /* Limit image height */
+  object-fit: contain; /* Ensure the image scales properly */
+}
+
+.role-blocks .role-block div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem; /* Space between image and name */
+}
+
+.role-blocks .role-block div img {
+  width: 6rem; /* Adjust image size */
+  height: 5rem; /* Ensure it maintains a square ratio */
+  object-fit: cover; /* Ensures images don't stretch */
+}
+
+.candidate-list {
+  display: flex;
+  flex-wrap: wrap; /* Allows candidates to flow to the next line */
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.candidate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  width: 10rem; /* Adjust size */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.candidate:hover {
+  background-color: #e0e0e0; /* Change color on hover */
+}
+
+.candidate-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.empty-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  border: 1px dashed #bbb;
+  border-radius: 0.5rem;
+  color: #999;
+  text-align: center;
+}

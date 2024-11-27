@@ -16,10 +16,11 @@ const RoleContainer = () => {
     { id: 1, name: "Angelika Thomas", image: "/assets/person1.png" },
     { id: 2, name: "Aisha Tanaka", image: "/assets/person3.png" },
     { id: 3, name: "Luca Rossi", image: "/assets/person4.png" },
-    { id: 4, name: "Chen Wei Li", image: "/assets/person5.png" },
+      { id: 4, name: "Chen Wei Li", image: "/assets/person5.png" },
     { id: 5, name: "Ethan James", image: "/assets/person.png" },
     { id: 6, name: "Maya Taylor", image: "/assets/person6.png" },
     { id: 7, name: "Alex Russo", image: "/assets/person7.png" },
+    // Add more candidates here
   ]);
 
   // Handle the drop action by setting the person's info to the role
@@ -52,20 +53,6 @@ const RoleContainer = () => {
     e.dataTransfer.setData("person", JSON.stringify(candidate));
   };
 
-  // Remove the candidate from the assigned role
-  const handleRemove = (role) => {
-    setAssignedRoles((prevState) => ({
-      ...prevState,
-      [role]: null,
-    }));
-
-    // Add the candidate back to the candidates list
-    const removedCandidate = assignedRoles[role];
-    if (removedCandidate) {
-      setCandidates((prevState) => [...prevState, removedCandidate]);
-    }
-  };
-
   return (
     <div className="role-container">
       <div className="pyramid-container">
@@ -78,12 +65,6 @@ const RoleContainer = () => {
             <div>
               <img src={assignedRoles.leader.image} alt={assignedRoles.leader.name} className="role-icon" />
               {assignedRoles.leader.name}
-              <img
-                src="/assets/dustbin.png"  // Update with your dustbin image path
-                alt="remove"
-                className="remove-icon"
-                onClick={() => handleRemove("leader")}
-              />
             </div>
           ) : (
             "Team-Lead"
@@ -99,12 +80,6 @@ const RoleContainer = () => {
               <div>
                 <img src={assignedRoles.role1.image} alt={assignedRoles.role1.name} className="role-icon" />
                 {assignedRoles.role1.name}
-                <img
-                  src="/assets/dustbin.png"  // Update with your dustbin image path
-                  alt="remove"
-                  className="remove-icon"
-                  onClick={() => handleRemove("role1")}
-                />
               </div>
             ) : (
               "Front-End Dev"
@@ -119,12 +94,6 @@ const RoleContainer = () => {
               <div>
                 <img src={assignedRoles.role2.image} alt={assignedRoles.role2.name} className="role-icon" />
                 {assignedRoles.role2.name}
-                <img
-                  src="/assets/dustbin.png"  // Update with your dustbin image path
-                  alt="remove"
-                  className="remove-icon"
-                  onClick={() => handleRemove("role2")}
-                />
               </div>
             ) : (
               "Back-End Dev"
@@ -141,12 +110,6 @@ const RoleContainer = () => {
               <div>
                 <img src={assignedRoles.role3.image} alt={assignedRoles.role3.name} className="role-icon" />
                 {assignedRoles.role3.name}
-                <img
-                  src="/assets/dustbin.png"  // Update with your dustbin image path
-                  alt="remove"
-                  className="remove-icon"
-                  onClick={() => handleRemove("role3")}
-                />
               </div>
             ) : (
               "Designer"
@@ -161,12 +124,6 @@ const RoleContainer = () => {
               <div>
                 <img src={assignedRoles.role4.image} alt={assignedRoles.role4.name} className="role-icon" />
                 {assignedRoles.role4.name}
-                <img
-                  src="/assets/dustbin.png"  // Update with your dustbin image path
-                  alt="remove"
-                  className="remove-icon"
-                  onClick={() => handleRemove("role4")}
-                />
               </div>
             ) : (
               "Testing"
@@ -181,12 +138,6 @@ const RoleContainer = () => {
               <div>
                 <img src={assignedRoles.role5.image} alt={assignedRoles.role5.name} className="role-icon" />
                 {assignedRoles.role5.name}
-                <img
-                  src="/assets/dustbin.png"  // Update with your dustbin image path
-                  alt="remove"
-                  className="remove-icon"
-                  onClick={() => handleRemove("role5")}
-                />
               </div>
             ) : (
               "Analyst"
@@ -201,12 +152,6 @@ const RoleContainer = () => {
               <div>
                 <img src={assignedRoles.role6.image} alt={assignedRoles.role6.name} className="role-icon" />
                 {assignedRoles.role6.name}
-                <img
-                  src="/assets/dustbin.png"  // Update with your dustbin image path
-                  alt="remove"
-                  className="remove-icon"
-                  onClick={() => handleRemove("role6")}
-                />
               </div>
             ) : (
               "Marketing"

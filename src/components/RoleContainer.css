@@ -1,4 +1,4 @@
-/* RoleContainer.css */
+
 .role-container {
   display: flex;
   flex-direction: column;
@@ -24,29 +24,29 @@
 }
 
 .role-block {
-  width: 12rem; /* Fixed width for all blocks */
-  height: 8rem; /* Fixed height for all blocks */
+  width: 12rem;
+  height: 8rem;
   background-color: #e0e0e0;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; /* Ensure the content inside doesn't overflow */
+  position: relative;
   text-align: center;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  box-sizing: border-box; /* Include padding in element's total size */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  box-sizing: border-box; 
+  transition: background-color 0.3s ease;
 }
 
 .role-block.empty {
-  background-color: #f5f5f5; /* Light background for empty blocks */
-  border: 1px dashed #bbb; /* Dashed border for empty blocks */
+  background-color: #f5f5f5;
+  border: 1px dashed #bbb; 
 }
 
 .leader {
-  background-color: #b3e0ff; /* Leader block color */
+  background-color: #b3e0ff; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -121,17 +121,15 @@
   text-align: center;
 }
 
-/* Updated remove icon positioning */
 .remove-icon {
   position: absolute;
   top: 5px;
   right: 5px;
-  width: 1.5rem; /* Adjust size of the icon */
+  width: 1.5rem;
   cursor: pointer;
-  z-index: 10; /* Ensure the icon is above the content */
+  z-index: 10; 
 }
 
-/* Ensuring consistent layout and positioning for all role blocks */
 .role-block {
-  position: relative; /* Ensure all blocks are positioned correctly */
+  position: relative;
 }

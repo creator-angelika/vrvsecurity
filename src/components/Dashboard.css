@@ -1,4 +1,4 @@
-/* Dashboard.css */
+
 .dashboard {
   flex-grow: 1;
   padding: 1.5rem;
@@ -7,7 +7,7 @@
   font-family: 'Inter', sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align children (including the people list) to the left */
+  align-items: flex-start;
 }
 
 .dashboard::before {
@@ -19,42 +19,41 @@
   min-height: 100vh;
   background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 2px, transparent 1px);
   background-size: 20px 20px;
-  z-index: -1; /* Ensures the dot grid stays behind other content */
+  z-index: -1; 
 }
 
 .dashboard h1 {
   font-family: 'Inter', sans-serif;
-  font-weight: 900; /* Ensures bold style */
+  font-weight: 900;
   position: relative;
-  z-index: 1; /* Ensures heading stays above the background */
+  z-index: 1; 
   color: #000000;
-  font-size: 2rem; /* Adjust size as needed */
-  margin-bottom: 1rem; /* Ensures there's space between the heading and the people list */
+  font-size: 2rem; 
+  margin-bottom: 1rem; 
 }
 
 .dashboard p {
   font-family: 'Inter', sans-serif;
-  font-weight: 500; /* Ensures bold style */
+  font-weight: 500;
   line-height: 0%;
-  z-index: 1; /* Ensures paragraph stays above the background */
+  z-index: 1;
   color: #000000;
-  font-size: 1rem; /* Adjust size as needed */
-  margin-bottom: 2rem; /* Adds space after the paragraph */
+  font-size: 1rem;
+  margin-bottom: 2rem; 
 }
 
 .wrench-icon {
-  width: 2rem; /* Adjust size of the wrench image */
-  height: 2rem; /* Maintain square dimensions */
+  width: 2rem; 
+  height: 2rem;
   margin-left: 0.5rem;
 }
 
-/* Main container flexbox layout */
 .main-container {
   display: flex;
-  justify-content: space-between; /* Space out the components */
-  align-items: flex-start; /* Aligns both components to the top */
-  gap: 2rem; /* Adds space between the list and the role container */
-  width: 100%; /* Ensures full width */
-  height: 80vh; /* Ensures full height of the container */
-  position: relative; /* Ensure stacking context for child elements */
+  justify-content: space-between; 
+  align-items: flex-start; 
+  gap: 2rem;
+  width: 100%; 
+  height: 80vh;
+  position: relative;
 }

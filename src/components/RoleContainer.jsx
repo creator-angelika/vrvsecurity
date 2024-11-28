@@ -20,21 +20,19 @@ const RoleContainer = () => {
     { id: 5, name: "Ethan James", image: "/assets/person.png" },
     { id: 6, name: "Maya Taylor", image: "/assets/person6.png" },
     { id: 7, name: "Alex Russo", image: "/assets/person7.png" },
-    // Add more candidates here
+
   ]);
 
-  // Handle the drop action by setting the person's info to the role
   const handleDrop = (e, role) => {
     e.preventDefault();
     const person = JSON.parse(e.dataTransfer.getData("person"));
 
-    // Check if the person is already assigned to a role
+
     if (Object.values(assignedRoles).some((assigned) => assigned?.id === person.id)) {
       alert(`${person.name} is already assigned to a role!`);
-      return; // Don't allow drop if already assigned
+      return;
     }
 
-    // Remove the candidate from the list and assign them to the role
     setCandidates((prevState) => prevState.filter((candidate) => candidate.id !== person.id));
 
     setAssignedRoles((prevState) => ({
@@ -43,12 +41,12 @@ const RoleContainer = () => {
     }));
   };
 
-  // Allow dropping by preventing default behavior
+  
   const handleDragOver = (e) => {
     e.preventDefault();
   };
 
-  // Handle dragging for candidates to prevent dropping in multiple roles
+  
   const handleDragStart = (e, candidate) => {
     e.dataTransfer.setData("person", JSON.stringify(candidate));
   };

@@ -1,4 +1,4 @@
-/* PeopleList.css */
+
 .people-list {
     display: flex;
     flex-direction: column;
@@ -15,19 +15,18 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: grab; /* Default cursor: grab */
-    outline: 2px solid rgb(0, 0, 0); /* Added for visibility */
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transformation */
+    cursor: grab; 
+    outline: 2px solid rgb(0, 0, 0); 
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
   }
   
-  /* When dragging, change cursor to 'grabbing' */
   .people-item:active {
     cursor: grabbing;
   }
   
   .people-item.dragging {
-    opacity: 0.5; /* Make the item semi-transparent when dragging */
-    transform: scale(1.05); /* Slightly scale up the item */
+    opacity: 0.5; 
+    transform: scale(1.05); 
   }
   
   .people-image {

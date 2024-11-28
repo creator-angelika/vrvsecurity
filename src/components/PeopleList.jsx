@@ -12,16 +12,16 @@ const people = [
 ];
 
 const PeopleList = () => {
-  const [dragging, setDragging] = useState(false);  // Track dragging state
+  const [dragging, setDragging] = useState(false);
 
   const handleDragStart = (e, person) => {
-    setDragging(true);  // Set dragging state to true
-    e.dataTransfer.setData('person', JSON.stringify(person));  // Store the person data
-    e.dataTransfer.setDragImage(new Image(), 0, 0); // Hide default drag image
+    setDragging(true);  
+    e.dataTransfer.setData('person', JSON.stringify(person)); 
+    e.dataTransfer.setDragImage(new Image(), 0, 0); 
   };
 
   const handleDragEnd = () => {
-    setDragging(false);  // Set dragging state to false when drag ends
+    setDragging(false);  
   };
 
   return (
@@ -29,7 +29,7 @@ const PeopleList = () => {
       {people.map((person) => (
         <div
           key={person.id}
-          className={`people-item ${dragging ? 'dragging' : ''}`}  // Apply dragging class
+          className={`people-item ${dragging ? 'dragging' : ''}`}
           draggable
           onDragStart={(e) => handleDragStart(e, person)}
           onDragEnd={handleDragEnd}
